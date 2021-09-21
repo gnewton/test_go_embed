@@ -1,6 +1,6 @@
 # test_go_embed
 
-Tests the total size of files that can be added to a Go binary with embed.
+Tests the total size of files that can be added to a Go binary with [embed](https://pkg.go.dev/embed).
 Generates a series of main.go with embedded files which it tries to compile and run.
 Stops when there is a compile or run error.
 
