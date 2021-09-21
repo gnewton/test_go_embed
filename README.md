@@ -80,3 +80,35 @@ The output should look something like:
     too much data in section SDATA (over 2e+09 bytes)
     make: *** [Makefile:3: default] Error 2
     gnewton@OptiPlex-7010:~/tmp/test_go_embed$ 
+
+# Example Go program
+Below is what is produced with the default values, for 3 embedded files:
+
+    package main
+    import _ "embed"
+    //go:embed f_524288000_0.data
+    var f_524288000_0 []byte
+     
+    //go:embed f_524288000_1.data
+    var f_524288000_1 []byte
+     
+    //go:embed f_524288000_2.data
+    var f_524288000_2 []byte
+     
+    //go:embed f_524288000_3.data
+    var f_524288000_3 []byte
+     
+    func main() {
+    
+    
+        print("f_524288000_0", " : ", string(f_524288000_0[0]), "\n")
+        print("f_524288000_0", " : ", string(f_524288000_0[len(f_524288000_0)-1]), "\n")
+        print("f_524288000_1", " : ", string(f_524288000_1[0]), "\n")
+        print("f_524288000_1", " : ", string(f_524288000_1[len(f_524288000_1)-1]), "\n")
+        print("f_524288000_2", " : ", string(f_524288000_2[0]), "\n")
+        print("f_524288000_2", " : ", string(f_524288000_2[len(f_524288000_2)-1]), "\n")
+        print("f_524288000_3", " : ", string(f_524288000_3[0]), "\n")
+        print("f_524288000_3", " : ", string(f_524288000_3[len(f_524288000_3)-1]), "\n")
+    
+    }
+    
