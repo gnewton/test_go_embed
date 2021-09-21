@@ -6,12 +6,13 @@
 set -e
 
 # Num files to test (starting at 1)
-max_num_files=100
+max_num_files=1000
 
 ((s0=1024)) #1K
 ((s1=s0*s0)) #1M
 ((s2= s1 * s0)) #1M
 ((embed_file_size=$s1*500)) #500M
+#((embed_file_size=$s1*100)) #100M
 
 # Size of test files
 BIN=test_embed_size
@@ -64,7 +65,7 @@ do
 
     echo "# Building Go"
     go build
-
+    ls -lh     ./test_embed_size
     echo "# Running Go"
     ./test_embed_size
     echo "####END###################"

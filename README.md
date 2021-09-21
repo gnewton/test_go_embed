@@ -19,11 +19,15 @@ The output should look something like:
     rm: cannot remove 'test_embed_size': No such file or directory
     524288000
     f_524288000_0.data
+    128000+0 records in
+    128000+0 records out
+    524288000 bytes (524 MB, 500 MiB) copied, 2.15716 s, 243 MB/s
     524288000
     # Building Go
+    -rwxrwxr-x 1 gnewton gnewton 502M Sep 20 20:45 ./test_embed_size
     # Running Go
-    f_524288000_0 : ¤
-    f_524288000_0 : -
+    f_524288000_0 : `
+    f_524288000_0 : a
     ####END###################
     
      
@@ -33,14 +37,15 @@ The output should look something like:
     f_524288000_1.data
     128000+0 records in
     128000+0 records out
-    524288000 bytes (524 MB, 500 MiB) copied, 2.1669 s, 242 MB/s
+    524288000 bytes (524 MB, 500 MiB) copied, 2.13479 s, 246 MB/s
     524288000
     # Building Go
+    -rwxrwxr-x 1 gnewton gnewton 1002M Sep 20 20:46 ./test_embed_size
     # Running Go
-    f_524288000_0 : ¤
-    f_524288000_0 : -
-    f_524288000_1 : 	
-    f_524288000_1 : 
+    f_524288000_0 : `
+    f_524288000_0 : a
+    f_524288000_1 : Y
+    f_524288000_1 : Â
     ####END###################
     
      
@@ -51,16 +56,17 @@ The output should look something like:
     f_524288000_2.data
     128000+0 records in
     128000+0 records out
-    524288000 bytes (524 MB, 500 MiB) copied, 2.17622 s, 241 MB/s
+    524288000 bytes (524 MB, 500 MiB) copied, 2.18658 s, 240 MB/s
     524288000
     # Building Go
+    -rwxrwxr-x 1 gnewton gnewton 1.5G Sep 20 20:47 ./test_embed_size
     # Running Go
-    f_524288000_0 : ¤
-    f_524288000_0 : -
-    f_524288000_1 : 	
-    f_524288000_1 : 
-    f_524288000_2 : Ï
-    f_524288000_2 : ³
+    f_524288000_0 : `
+    f_524288000_0 : a
+    f_524288000_1 : Y
+    f_524288000_1 : Â
+    f_524288000_2 : ä
+    f_524288000_2 : 
     ####END###################
     
      
@@ -72,14 +78,14 @@ The output should look something like:
     f_524288000_3.data
     128000+0 records in
     128000+0 records out
-    524288000 bytes (524 MB, 500 MiB) copied, 2.20314 s, 238 MB/s
+    524288000 bytes (524 MB, 500 MiB) copied, 2.20701 s, 238 MB/s
     524288000
     # Building Go
     # github.com/gnewton/test_embed_size
     too much data in section SXCOFFTOC (over 2e+09 bytes)
     too much data in section SDATA (over 2e+09 bytes)
     make: *** [Makefile:3: default] Error 2
-    gnewton@OptiPlex-7010:~/tmp/test_go_embed$ 
+    $ 
 
 # Example Go program
 Below is what is produced with the default values, for 3 embedded files:
