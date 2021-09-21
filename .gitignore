@@ -1,0 +1,4 @@
+f_*.data
+*~
+*.go
+go.mod
